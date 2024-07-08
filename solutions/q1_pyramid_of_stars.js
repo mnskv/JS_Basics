@@ -1,23 +1,18 @@
 const buildPyramid = (height) => {
-    if (height <= 0 || typeof height !== 'number') {
+    if (typeof height !== 'number' || height <= 0 || !Number.isInteger(height)) {
         return '';
-    }
-
-    let pyramid = '';
-
-    for (let i = 1; i <= height; i++) {
-        let space = ' '.repeat(height - i);
-        let stars = '* '.repeat(i).trim(); // Ensure stars are separated by a space
-
-        pyramid += space + stars;
-
-        if (i !== height) {
-            pyramid += '\n'; // Add newline after each row except the last one
+   }
+   let pyramid = '';
+   for (let i = 1; i <= height; i =i + 1) {
+        let str = ' '.repeat(height - i);
+        str += ' '
+        str += '* '.repeat(i).trimEnd() + '  ';
+        pyramid += str;
+        if (i <= height) {
+             pyramid += '\n';
         }
-    }
-    console.log(pyramid);
-
-    return pyramid;
+   }
+   return pyramid;
 };
 
 /* For example,
