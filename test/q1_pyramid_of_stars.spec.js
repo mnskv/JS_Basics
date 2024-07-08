@@ -8,17 +8,17 @@ describe('Testing - pyramid_of_stars', () => {
 		done();
 	});
 
-	// it('positive test case for odd count of height', (done) => {
-	// 	expect(pyramid(5)).equal(
-	// 		'     *  \n    * *  \n   * * *  \n  * * * *  \n * * * * *  \n');
-	// 	done();
-	// });
+	it('positive test case for odd count of height', (done) => {
+		expect(pyramid(5)).equal(
+			'     *  \n    * *  \n   * * *  \n  * * * *  \n * * * * *  \n');
+		done();
+	});
 
-	// it('positive test case for even count of height', (done) => {
-	// 	expect(pyramid(6)).equal(
-	// 		'      *  \n     * *  \n    * * *  \n   * * * *  \n  * * * * *  \n * * * * * *  \n');
-	// 	done();
-	// });
+	it('positive test case for even count of height', (done) => {
+		expect(pyramid(6)).equal(
+			'      *  \n     * *  \n    * * *  \n   * * * *  \n  * * * * *  \n * * * * * *  \n');
+		done();
+	});
 
 	it('negative test case', (done) => {
 		expect(pyramid('invalid value')).to.deep.equal('');
